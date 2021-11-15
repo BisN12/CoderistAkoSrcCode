@@ -18,20 +18,39 @@
 
 		<div class="row">
 			<div class="col-1">
-			<h1>Best Commision Website</h1>
+			<h1>Best Commision <br>Website</br></h1>
 			<p>You Can Design Your Website And We Will Code It For You.</p>
 			<button type="button">Explore Commision Center</button>
+
+			<ul>
+				<li class="btn active"></li>
+				<li class="btn"></li>
+				<li class="btn"></li>
+			</ul>
+
 		</div>
 		<div class="col-2">
-			<img src="images/vccode-background.jfif">
+			<img src="images/vccode-background.jfif" id="banner">
 			</div>
 		</div>
-
-
-
-
-
 	</div>
+
+	<script>
+			var btn = document.getElementsByClassName("btn");
+	var banner = document.getElementById("banner");
+
+	btn[0].onclick = function() {
+		banner.src = "images/vccode-background.jfif";
+	}
+
+	btn[1].onclick = function() {
+		banner.src = "images/websitelol.jpg";
+	}
+
+	btn[2].onclick = function() {
+		banner.src = "images/click.jpg";
+	}
+	</script>
 
 </body>
 </html>
