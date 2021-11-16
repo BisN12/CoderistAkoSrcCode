@@ -18,7 +18,7 @@
 
 		<div class="row">
 			<div class="col-1">
-			<h1>Best Commision <br>Website</br></h1>
+			<h1><span class = "auto-input">Best Commision Website</span></h1>
 			<p>You Can Design Your Website And We Will Code It For You.</p>
 			<button type="button">Explore Commision Center</button>
 
@@ -41,16 +41,42 @@
 
 	btn[0].onclick = function() {
 		banner.src = "images/vccode-background.jfif";
+		animation ();
+		this.classList.add("active");
 	}
 
 	btn[1].onclick = function() {
-		banner.src = "images/websitelol.jpg";
+		banner.src = "images/click.jpg";
+		animation ();
+		this.classList.add("active");
 	}
 
 	btn[2].onclick = function() {
-		banner.src = "images/click.jpg";
+		banner.src = "images/websitelol.jpg";
+		animation ();
+		this.classList.add("active");
 	}
-	</script>
 
+
+	function animation (){
+	banner.classList.add("zoom");
+		setTimeout(function() {
+			banner.classList.remove("zoom");
+		},500)
+
+		for(b of btn){
+			b.classList.remove("active");
+		}
+		}
+	</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+	var typed = new Typed(".auto-input", {
+		strings: ["Best Commision Website", "Im Rjave", "And This is Coderist Ako!"],
+		typeSpeed: 100,
+		backSpeed: 100,
+		loop: true,
+	})
+</script>
 </body>
 </html>
